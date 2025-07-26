@@ -11,8 +11,10 @@ const AdminRoutes = require('./src/routes/admin.routes');
 const PublicRoutes = require('./src/routes/public.routes');
 const AgentRoutes = require('./src/routes/agent.routes')
 const regionRouter = require('./src/routes/region.routes')
+const contactRoutes = require('./src/routes/contact.routes'); // adjust path as needed
+const { registerContactRoutes } = require('./src/routes/contact.routes');
 
-
+registerContactRoutes(app); // This sets up the /api/contact route
 app.use(Express.static('./src/public')) //serves our static genesis project
 app.use(Express.json())
 
