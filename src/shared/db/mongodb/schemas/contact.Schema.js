@@ -13,11 +13,23 @@ const contactSchema = new mongoose.Schema({
     lowercase: true,
     trim: true
   },
+  phone: {
+    type: String,
+    trim: true
+  },
   company_name: {
     type: String,
     trim: true
   },
-  phone: {
+  project_name: {
+    type: String,
+    trim: true
+  },
+  project_desc: {
+    type: String,
+    trim: true
+  },
+  department: {
     type: String,
     trim: true
   },
@@ -25,6 +37,10 @@ const contactSchema = new mongoose.Schema({
     type: String,
     required: true,
     trim: true
+  },
+  file: {                  
+    type: String,           
+    default: null
   },
   createdAt: {
     type: Date,
