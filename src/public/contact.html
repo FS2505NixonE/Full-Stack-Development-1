@@ -1,10 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <title>contact-form</title>
+<!-- CONTACT FORM-->
 <form id="contact-form">
-  <input type="text" id="full_name"  required />
-  <input type="email" id="email"  required />
-  <input type="text" id="company_name"  />
-  <input type="tel" id="phone"  />
-  <textarea id="message" required></textarea>
-  <button type="submit">Submit</button>
+    <label><b>Contact Form</b></label><br>
+    <p><ins>Full Name</ins></p>
+    <input type="text" name="full_name" id="full_name"  required /><br>
+    <p><ins>Email</ins></p>
+    <input type="email" name="email" id="email"  required /><br>
+    <p><ins>Company Name</ins></p>
+    <input type="text" name="company_name" id="company_name"  /><br>
+    <p><ins>Phone</ins></p>
+    <input type="tel" name="phone" id="phone"  /><br>
+    <p><ins>Message:</ins></p>
+    <textarea id="message" required></textarea><br>
+    <input type="submit" action="" method="POST"></input>
 </form>
-
+<!-- CONNECTION TO CONTACT.JS-->
 <script src="/assets/js/contact.js"></script>
+</html>

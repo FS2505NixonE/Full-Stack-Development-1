@@ -3,7 +3,8 @@ const Express = require('express');
 const app = Express();
 const port = process.env.PORT || 3004;
 
-
+app.use(Express.static('./src/public')) //serves our static genesis project
+app.use(Express.json())
 const MongoManager = require('./src/shared/db/mongodb/mongo-manager')
 const MiddleWare = require('./src/shared/middleware/base-middleware');
 const HealthRoutes = require('./src/routes/health.routes');
@@ -15,9 +16,6 @@ const contactRoutes = require('./src/routes/contact.routes'); // adjust path as 
 const { registerContactRoutes } = require('./src/routes/contact.routes');
 
 registerContactRoutes(app); // This sets up the /api/contact route
-app.use(Express.static('./src/public')) //serves our static genesis project
-app.use(Express.json())
-
 
 MiddleWare.registerBaseMiddleWare(app)
 HealthRoutes.registerHealthRoutes(app);
